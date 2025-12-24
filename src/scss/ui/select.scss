@@ -1,0 +1,85 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.select {
+  position: relative;
+
+  &._open {
+    .select-btn {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .select-body {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.select-btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  color: black;
+
+  svg {
+    position: absolute;
+    width: 11px;
+    height: 6px;
+    right: 25px;
+
+    transition: transform 0.3s ease;
+  }
+}
+.select-input {
+  padding-right: 50px;
+  pointer-events: none;
+}
+.select-body {
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: white;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 10;
+
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+  }
+}
+.select-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  min-height: 50px;
+  padding: 15px;
+
+  color: var(--gray);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  @include hover {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+  &._active {
+    background-color: rgba(162, 221, 92, 0.2);
+    color: black;
+  }
+}

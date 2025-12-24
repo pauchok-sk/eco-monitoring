@@ -1,0 +1,31 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.social {
+  display: flex;
+  gap: 20px;
+  @include laptop-min {
+    gap: 15px;
+  }
+}
+.social-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  color: var(--primary);
+
+  transition: color .3s ease;
+  @include laptop-min {
+    width: 25px;
+    height: 25px;
+  }
+  @include hover {
+    color: var(--primary-d);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

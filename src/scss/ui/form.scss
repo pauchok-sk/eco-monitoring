@@ -1,0 +1,22 @@
+.input-control {
+  width: 100%;
+}
+.input {
+  outline: none;
+  background-color: white;
+  border: 2px solid white;
+  padding: 14px 24px;
+  width: 100%;
+
+  font-size: 16px;
+  color: black;
+
+  transition: border-color .3s ease;
+
+  &:focus {
+    border-color: var(--primary);
+  }
+  &::placeholder {
+    color: var(--gray);
+  }
+}
