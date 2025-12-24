@@ -29,9 +29,6 @@
   height: 100dvh;
   width: 400px;
   max-width: 100%;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
   background-color: var(--dark-m);
   overflow-y: auto;
   z-index: 110;
@@ -55,6 +52,13 @@
     display: none;
   }
 
+  &__body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
   &__head {
     @include flex-between;
     margin-bottom: 30px;
@@ -90,6 +94,9 @@
 
     a {
       transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary)
+      }
     }
   }
   &__services-btn {
@@ -125,6 +132,62 @@
 
     @include hover {
       color: var(--primary);
+    }
+  }
+  &__services {
+    position: absolute;
+    inset: 0;
+    background-color: var(--dark-m);
+    padding: 30px 20px;
+    z-index: 10;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
+
+    &._open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+  &__services-prev {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 15px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 10px;
+      height: 20px;
+    }
+  }
+  &__services-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    a {
+      font-size: 16px;
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
     }
   }
 }

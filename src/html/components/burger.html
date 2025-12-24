@@ -1,47 +1,69 @@
 <aside>
   <div class="burger-overlay" id="burger-overlay"></div>
-  <div class="burger _open" id="burger">
-    <div class="burger__head">
-      <a href="/" class="burger__logo">
-        <img src="@img/logo.svg" alt="logo" />
-      </a>
-      <div class="burger__close" id="burger-close">
+  <div class="burger" id="burger">
+    <div class="burger__body">
+      <div class="burger__head">
+        <a href="/" class="burger__logo">
+          <img src="@img/logo.svg" alt="logo" />
+        </a>
+        <div class="burger__close" id="burger-close">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+      <ul class="list burger__list">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Пресс-релизы</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <div class="burger__services-btn" id="burger-services-open">
+        <span>Услуги</span>
         <svg>
-          <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          <use xlink:href="img/icons/icons.svg#icon-next"></use>
         </svg>
       </div>
-    </div>
-    <ul class="list burger__list">
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">О компании</a></li>
-      <li><a href="#">Пресс-релизы</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-    <div class="burger__services-btn" id="burger-services-btn">
-      <span>Услуги</span>
-      <svg>
-        <use xlink:href="img/icons/icons.svg#icon-next"></use>
-      </svg>
-    </div>
-    <div class="burger__contacts">
-      <div class="burger__address">
-        628401, ХМАО – Югра, г.Сургут, ул. Щепеткина, 50/2
+      <div class="burger__contacts">
+        <div class="burger__address">
+          628401, ХМАО – Югра, г.Сургут, ул. Щепеткина, 50/2
+        </div>
+        <div class="burger__work-time">
+          пн-пт с 9:00 до 17:00, сб-вс - выходной
+        </div>
+        <a href="tel:83462555512" class="burger__tel">8 (3462) 55-55-12</a>
+        <div class="social">
+          <a href="#" target="_blank" rel="nofollow" class="social-btn">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-tg"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="nofollow" class="social-btn">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-max"></use>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="burger__work-time">
-        пн-пт с 9:00 до 17:00, сб-вс - выходной
-      </div>
-      <a href="tel:83462555512" class="burger__tel">8 (3462) 55-55-12</a>
-      <div class="social">
-        <a href="#" target="_blank" rel="nofollow" class="social-btn">
+      <div class="burger__services" id="burger-services">
+        <div class="burger__services-prev" id="burger-services-prev">
           <svg>
-            <use xlink:href="img/icons/icons.svg#icon-tg"></use>
+            <use xlink:href="img/icons/icons.svg#icon-prev"></use>
           </svg>
-        </a>
-        <a href="#" target="_blank" rel="nofollow" class="social-btn">
-          <svg>
-            <use xlink:href="img/icons/icons.svg#icon-max"></use>
-          </svg>
-        </a>
+          <span>Назад</span>
+        </div>
+        <ul class="list burger__services-list">
+          <li><a href="#">Утилизация отходов</a></li>
+          <li><a href="#">Бухгалтерское сопровождение</a></li>
+          <li><a href="#">Экологическое сопровождение</a></li>
+          <li><a href="#">Рекультивационные мероприятия</a></li>
+          <li><a href="#">Прием ртутных ламп</a></li>
+          <li><a href="#">Утилизация отходов</a></li>
+          <li><a href="#">Бухгалтерское сопровождение</a></li>
+          <li><a href="#">Экологическое сопровождение</a></li>
+          <li><a href="#">Рекультивационные мероприятия</a></li>
+          <li><a href="#">Прием ртутных ламп</a></li>
+        </ul>
       </div>
     </div>
   </div>

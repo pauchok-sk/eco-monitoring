@@ -1,1 +1,13 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
 
+.t-title {
+  font-weight: 600;
+  font-size: 32px;
+  @include laptop-min {
+    font-size: 28px;
+  }
+  @include tablet {
+    font-size: 24px;
+  }
+}

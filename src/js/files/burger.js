@@ -41,21 +41,20 @@ export default function burger() {
       burger.classList.add("_open");
       burgerOverlay.classList.add("_active");
       document.body.classList.add("body-hidden");
-
-      // updateHeightBurger();
     }
 
-    // function updateHeightBurger() {
-    //   burger.style.maxHeight = `${window.visualViewport.height}px`;
+    const services = burger.querySelector("#burger-services");
 
-    //   if (window.matchMedia("(max-width: 991px)").matches) {
-    //     burger.style.top = `${headerHeight + 1}px`;
-    //   }
-    // }
+    if (services) {
+      const btnServicesOpen = burger.querySelector("#burger-services-open");
+      const btnServicesPrev = burger.querySelector("#burger-services-prev");
 
-    // window.visualViewport.addEventListener("resize", updateHeightBurger);
-    // window.visualViewport.addEventListener("scroll", updateHeightBurger);
-
-    // updateHeightBurger();
+      btnServicesOpen.addEventListener("click", () => {
+        services.classList.add("_open");
+      });
+      btnServicesPrev.addEventListener("click", () => {
+        services.classList.remove("_open");
+      });
+    }
   }
 }

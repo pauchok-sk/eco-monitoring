@@ -1,8 +1,61 @@
-.btn {
+@use "../base/templates" as *;
+@use "../base/media" as *;
+.btn-s {
+  --backgrorund: var(--primary);
+  --border: var(--primary);
+  --color: black;
+  --svg-color: var(--dark);
+  --backgrorund-hover: var(--primary-d);
+  --border-hover: var(--primary-d);
+  --color-hover: black;
+  --svg-color-hover: var(--dark);
+  --svg-transform-hover: 45deg;
+
+  @include flex-center;
+  outline: none;
   cursor: pointer;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  color: inherit;
+  gap: 15px;
+  padding: 19px 30px;
+  width: fit-content;
+  background-color: var(--backgrorund);
+  border: 1px solid var(--border);
+
+  text-align: center;
+  font-size: 16px;
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    color: var(--svg-color);
+
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+  }
+
+  @include hover {
+    background-color: var(--backgrorund-hover);
+    border: 1px solid var(--border-hover);
+    svg {
+      color: var(--svg-color-hover);
+      transform: rotate(var(--svg-transform-hover));
+    }
+  }
+
+  &._outline {
+    --backgrorund: transparent;
+    --border: rgba(255, 255, 255, 0.2);
+    --color: white;
+    --svg-color: var(--primary);
+    --backgrorund-hover: transparent;
+    --border-hover: var(--primary);
+    --color-hover: white;
+    --svg-color-hover: var(--primary);
+  }
 }

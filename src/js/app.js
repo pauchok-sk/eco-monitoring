@@ -5,6 +5,7 @@ import itemsInSelect from "./files/itemsInSelect.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import burger from "./files/burger.js";
+import mediaAdaptive from "./files/mediaAdaptive.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   spoller();
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   select();
   itemsInSelect();
   burger();
+  mediaAdaptive()
 
   Fancybox.bind("[data-fancybox]", {});
   // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);
