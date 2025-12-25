@@ -4,7 +4,7 @@
 .header-t {
   padding: 10px 0px;
   background-color: var(--dark-m);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color);
 
   @include laptop-min {
     display: none;
@@ -55,7 +55,7 @@
 }
 .header {
   padding: 20px 0px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color);
   background-color: var(--dark-b);
   &__wrapper {
     @include flex-between;

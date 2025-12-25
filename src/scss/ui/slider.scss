@@ -1,0 +1,34 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin-top: 30px;
+
+  @include tablet {
+    margin-top: 25px;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    background-color: white;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 30px;
+    height: 3px;
+
+    opacity: 0.3;
+
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 1;
+    }
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}

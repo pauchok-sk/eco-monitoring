@@ -1,6 +1,40 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 
+.s-title {
+  position: relative;
+  font-weight: 600;
+  font-size: 44px;
+  margin: 0;
+
+  @include laptop-min {
+    font-size: 36px;
+  }
+  @include tablet {
+    font-size: 28px;
+    padding-left: 4px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    bottom: 4px;
+    left: -50px;
+    background: linear-gradient(360deg, #d5e332 0%, #42d32c 100%);
+    width: 5px;
+
+    @media (max-width: 1760px) {
+      left: -15px;
+    }
+    @include laptop-min {
+      width: 3px;
+    }
+    @include tablet {
+      left: -8px;
+    }
+  }
+}
 .t-title {
   font-weight: 600;
   font-size: 32px;

@@ -168,4 +168,14 @@
       height: 24px;
     }
   }
+  &__slider-pagination {
+    position: absolute;
+    left: 50% !important;
+    bottom: 30px !important;
+    transform: translateX(-50%);
+
+    @include tablet {
+      bottom: 20px !important;
+    }
+  }
 }

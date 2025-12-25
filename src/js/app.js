@@ -6,6 +6,8 @@ import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import burger from "./files/burger.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
+import offsetLinesBody from "./files/offsetLinesBody.js";
+import widgetDocs from "./files/widgetDocs.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   spoller();
@@ -14,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
   select();
   itemsInSelect();
   burger();
-  mediaAdaptive()
+  mediaAdaptive();
+  offsetLinesBody();
+  widgetDocs();
 
   Fancybox.bind("[data-fancybox]", {});
   // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);

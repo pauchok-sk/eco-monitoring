@@ -6,8 +6,6 @@
   touch-action: none;
 }
 .body {
-  --offset: calc((100vw - var(--container-width)) / 2 - 30px);
-
   position: relative;
   background-color: var(--dark);
   color: white;
@@ -16,11 +14,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 
-  @media (max-width: 1760px) {
-    --offset: 15px;
-  }
   @include tablet {
-    --offset: 8px;
     font-size: 15px;
   }
 
@@ -32,21 +26,33 @@
     bottom: 0;
     display: block;
     width: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--border-color);
 
     z-index: 10;
   }
   &::before {
     left: var(--offset);
+    @include desktop-big {
+      left: 14px;
+    }
+    @include tablet {
+      left: 7px;
+    }
   }
   &::after {
     right: var(--offset);
+    @include desktop-big {
+      right: 14px;
+    }
+    @include tablet {
+      right: 7px;
+    }
   }
 
   a {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 }

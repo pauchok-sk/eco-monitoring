@@ -1,0 +1,73 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-services {
+  &__slider {
+  }
+  &__slider-wrapper {
+  }
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: space-between;
+
+    min-height: 180px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+
+    font-size: 18px;
+
+    transition:
+      border-color 0.3s ease,
+      color 0.3s ease;
+
+    @include laptop-middle {
+      padding: 20px;
+    }
+    @include tablet {
+      padding: 15px;
+      font-size: 16px;
+      min-height: 140px;
+    }
+    @include hover {
+      border-color: var(--primary);
+      color: var(--primary);
+
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    svg {
+      color: var(--primary);
+      width: 15px;
+      height: 15px;
+
+      transition: transform 0.3s ease;
+    }
+
+    &._primary {
+      font-size: 20px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-color: var(--primary) !important;
+      background-color: rgba(162, 221, 92, 0.1) !important;
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        @include tablet {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

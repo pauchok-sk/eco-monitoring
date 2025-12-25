@@ -1,0 +1,35 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.sect-m {
+  margin: 100px 0px;
+  @include laptop-middle {
+    margin: 80px 0px;
+  }
+  @include laptop-min {
+    margin: 70px 0px;
+  }
+  @include tablet {
+    margin: 50px 0px;
+  }
+}
+.sect-p {
+  padding: 100px 0px;
+  @include laptop-middle {
+    padding: 80px 0px;
+  }
+  @include laptop-min {
+    padding: 70px 0px;
+  }
+  @include tablet {
+    padding: 50px 0px;
+  }
+}
+
+.sect-head {
+  margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}

@@ -13,14 +13,22 @@
 @use "./ui/form";
 @use "./ui/select";
 @use "./ui/title";
+@use "./ui/sect";
+@use "./ui/slider";
+@use "./ui/colors";
 
 // widgets
 @use "./widgets/modal";
 @use "./widgets/burger";
+@use "./widgets/widget-docs";
 
 // components
 @use "./components/header";
 
 @use "./components/intro";
+@use "./components/s-adv";
+@use "./components/s-services";
+@use "./components/s-license";
+@use "./components/s-connect";
 
 @use "./components/footer";
