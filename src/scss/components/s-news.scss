@@ -1,0 +1,18 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-news {
+  &__head {
+    @include tablet-min {
+      .btn-simple {
+        display: none;
+      }
+    }
+  }
+  &__head-btn {
+    width: 100%;
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
+}

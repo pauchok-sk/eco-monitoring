@@ -27,9 +27,17 @@
 }
 
 .sect-head {
+  @include flex-between;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+  gap: 20px;
+
+  &._end {
+    align-items: flex-end;
+  }
 
   @include tablet {
     margin-bottom: 30px;
   }
+
 }
