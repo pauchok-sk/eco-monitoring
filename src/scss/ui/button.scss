@@ -1,11 +1,11 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 .btn-s {
-  --backgrorund: var(--primary);
+  --background: var(--primary);
   --border: var(--primary);
   --color: black;
   --svg-color: var(--dark);
-  --backgrorund-hover: var(--primary-d);
+  --background-hover: var(--primary-d);
   --border-hover: var(--primary-d);
   --color-hover: black;
   --svg-color-hover: var(--dark);
@@ -17,12 +17,13 @@
   gap: 15px;
   padding: 19px 30px;
   width: fit-content;
-  background-color: var(--backgrorund);
+  background-color: var(--background);
   border: 1px solid var(--border);
 
   text-align: center;
   font-size: 16px;
   color: var(--color);
+  user-select: none;
 
   transition:
     color 0.3s ease,
@@ -40,8 +41,9 @@
   }
 
   @include hover {
-    background-color: var(--backgrorund-hover);
+    background-color: var(--background-hover);
     border: 1px solid var(--border-hover);
+    color: var(--color-hover);
     svg {
       color: var(--svg-color-hover);
       transform: rotate(var(--svg-transform-hover));
@@ -49,14 +51,34 @@
   }
 
   &._outline {
-    --backgrorund: transparent;
+    --background: transparent;
     --border: rgba(255, 255, 255, 0.2);
     --color: white;
     --svg-color: var(--primary);
-    --backgrorund-hover: transparent;
+    --background-hover: transparent;
     --border-hover: var(--primary);
     --color-hover: white;
     --svg-color-hover: var(--primary);
+  }
+  &._outline-dark {
+    --background: transparent;
+    --border: rgba(51, 51, 51, 0.2);
+    --color: var(--dark);
+    --svg-color: var(--dark);
+    --background-hover: var(--dark);
+    --border-hover: var(--dark);
+    --color-hover: white;
+    --svg-color-hover: white;
+  }
+  &._black {
+    --background: var(--black);
+    --border: var(--black);
+    --color: white;
+    --svg-color: white;
+    --background-hover: transparent;
+    --border-hover: var(--black);
+    --color-hover: var(--black);
+    --svg-color-hover: var(--black);
   }
 }
 .btn-simple {
@@ -65,8 +87,11 @@
   gap: 15px;
 
   line-height: 150%;
+  user-select: none;
 
-  transition: color .3s ease, border-color .3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
 
   @include hover {
     color: var(--primary);
@@ -82,6 +107,6 @@
     height: 14px;
     color: var(--primary);
 
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
   }
 }

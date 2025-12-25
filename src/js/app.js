@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   offsetLinesBody();
   widgetDocs();
 
-  Fancybox.bind("[data-fancybox]", {});
+  Fancybox.bind("[data-fancybox]", { closeButton: false });
   // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);
 });

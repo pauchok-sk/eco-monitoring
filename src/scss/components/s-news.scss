@@ -15,4 +15,24 @@
       display: none;
     }
   }
+  &__slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto !important;
+
+      @include laptop {
+        width: 380px !important;
+        max-width: 100%;
+      }
+
+      .card-new {
+        height: 100%;
+      }
+    }
+  }
 }

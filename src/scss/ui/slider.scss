@@ -12,10 +12,16 @@
     margin-top: 25px;
   }
 
+  &._mob {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   .swiper-pagination-bullet {
     margin: 0 !important;
     background-color: white;
-    border-radius: 0px;
+    border-radius: 0px !important;
     cursor: pointer;
     width: 30px;
     height: 3px;
@@ -24,11 +30,64 @@
 
     transition: opacity 0.3s ease;
 
+    @include tablet {
+      width: 25px;
+      height: 2px;
+    }
     @include hover {
       opacity: 1;
     }
     &.swiper-pagination-bullet-active {
       opacity: 1;
     }
+  }
+}
+
+.slider-arrow {
+  @include flex-center;
+  position: absolute;
+  cursor: pointer;
+  width: 32px;
+  height: 56px;
+  z-index: 10;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+
+  @include laptop-min {
+    display: none;
+  }
+  @include hover {
+    color: var(--primary);
+  }
+
+  &._prev {
+    left: -10px;
+    transform: translateX(-100%);
+    @media (max-width: 1760px) {
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+  &._next {
+    right: -10px;
+    transform: translateX(100%);
+    @media (max-width: 1760px) {
+      right: 0;
+      transform: translateX(0);
+    }
+  }
+  &.swiper-button-disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  &.swiper-button-lock {
+    display: none;
+  }
+
+  svg {
+    width: 12px;
+    height: 24px;
   }
 }
