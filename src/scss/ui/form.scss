@@ -31,6 +31,9 @@
   &._light {
     color: rgba(242, 242, 242, 0.3);
   }
+  &._dark {
+    color: rgba(51, 51, 51, 0.5);
+  }
 
   input[type="checkbox"] {
     position: absolute;

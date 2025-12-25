@@ -1,0 +1,27 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-about {
+  &__wrapper {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__info {
+  }
+  &__descr {
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0px 0px 40px 0px;
+  }
+  &__btn {
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

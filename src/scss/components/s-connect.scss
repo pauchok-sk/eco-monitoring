@@ -1,0 +1,75 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-connect {
+  &__body {
+    position: relative;
+    padding: 70px 50px;
+    border: 1px solid var(--primary);
+    background-color: var(--tech);
+    color: var(--dark-b);
+    z-index: 1;
+
+    @include laptop {
+      padding: 50px 30px;
+    }
+    @include tablet-min {
+      padding: 30px 20px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 95px;
+      background: url("@img/connect-decor.png") top 0 left 0 / cover no-repeat;
+      z-index: -1;
+    }
+  }
+  &__head {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 50px;
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__descr {
+    margin: 0;
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
+
+    .input {
+      height: 100%;
+    }
+    .btn-s {
+      width: 100%;
+    }
+    .check-wrapper {
+      @include laptop {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      @include laptop-min {
+        grid-area: auto;
+      }
+    }
+  }
+}
