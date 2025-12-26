@@ -1,6 +1,6 @@
 export default function widgetDocs() {
   const widget = document.querySelector("#widget-docs");
-  const formSearch = widget.querySelector("#widget-docs-search");
+  const formSearch = widget?.querySelector("#widget-docs-search");
 
   if (widget) {
     const filters = widget.querySelector("#widget-docs-filters");

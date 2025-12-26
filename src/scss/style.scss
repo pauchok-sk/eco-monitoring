@@ -17,6 +17,9 @@
 @use "./ui/slider";
 @use "./ui/colors";
 @use "./ui/card-new";
+@use "./ui/card-service";
+@use "./ui/breadcrumbs";
+@use "./ui/nav-slider";
 
 // widgets
 @use "./widgets/modal";
@@ -34,5 +37,6 @@
 @use "./components/s-about";
 @use "./components/s-news";
 @use "./components/s-request";
+@use "./components/s-archive-services";
 
 @use "./components/footer";

@@ -1,0 +1,102 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.nav-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-slider {
+  border-bottom: 1px solid var(--border-color);
+  &__item {
+    position: relative;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    width: fit-content;
+
+    line-height: 150%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+
+    transition: color 0.3s ease;
+
+    @include tablet {
+      padding: 15px 0px;
+    }
+    @include hover {
+      color: white;
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: var(--primary);
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
+    }
+    &._active {
+      color: white;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &__next-btn {
+    @include flex-center;
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+
+    z-index: 10;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      color 0.3s ease;
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 12px;
+      height: 24px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 150px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(45, 45, 45, 0) 0%,
+        rgba(45, 45, 45, 0.75) 44.71%,
+        #2d2d2d 100%
+      );
+      z-index: -1;
+
+      @include tablet-min {
+        width: 100px;
+      }
+    }
+  }
+}
