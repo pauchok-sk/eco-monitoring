@@ -39,15 +39,15 @@
       left: 7px;
     }
   }
-  &::after {
-    right: var(--offset);
-    @include desktop-big {
-      right: 14px;
-    }
-    @include tablet {
-      right: 7px;
-    }
-  }
+  // &::after {
+  //   right: var(--offset);
+  //   @include desktop-big {
+  //     right: 14px;
+  //   }
+  //   @include tablet {
+  //     right: 7px;
+  //   }
+  // }
 
   a {
     -webkit-user-select: none;
