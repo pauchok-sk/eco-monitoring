@@ -20,6 +20,7 @@
 @use "./ui/card-service";
 @use "./ui/breadcrumbs";
 @use "./ui/nav-slider";
+@use "./ui/content";
 
 // widgets
 @use "./widgets/modal";
@@ -39,5 +40,6 @@
 @use "./components/s-request";
 @use "./components/s-archive-services";
 @use "./components/s-hero";
+@use "./components/s-info";
 
 @use "./components/footer";

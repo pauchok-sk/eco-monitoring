@@ -7,6 +7,9 @@
   font-size: 44px;
   margin: 0;
 
+  @include laptop {
+    font-size: 40px;
+  }
   @include laptop-min {
     font-size: 36px;
   }

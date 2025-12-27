@@ -110,3 +110,26 @@
     transition: transform 0.3s ease;
   }
 }
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 15px;
+
+  line-height: 150%;
+  text-decoration: underline;
+  color: var(--primary);
+
+  transition: color 0.3s ease;
+
+  @include hover {
+    color: var(--primary-d);
+    text-decoration: none;
+  }
+
+  svg {
+    width: 28px;
+    height: 33px;
+  }
+}
