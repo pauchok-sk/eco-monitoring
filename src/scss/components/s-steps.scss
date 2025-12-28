@@ -1,16 +1,34 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
 .s-steps {
+  overflow: hidden;
+  &__slider {
+    overflow: visible !important;
+  }
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    row-gap: 40px;
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      row-gap: 40px;
+    }
+    @media (min-width: 1540px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   &__item {
     position: relative;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
 
     z-index: 1;
+
+    @include laptop-min {
+      width: 390px !important;
+      max-width: 100%;
+    }
 
     .num {
       position: absolute;
@@ -19,17 +37,31 @@
       color: var(--primary);
       left: 0;
       z-index: -1;
+      @include laptop {
+        font-size: 90px;
+      }
     }
     .descr {
       display: flex;
       align-items: center;
       min-height: 250px;
+      height: 100%;
       line-height: 150%;
       padding: 30px;
       margin-left: 45px;
 
       backdrop-filter: blur(8px);
       background: rgba(40, 40, 40, 0.7);
+      @include laptop {
+        padding: 20px;
+        min-height: 210px;
+        margin-left: 35px;
+      }
+    }
+  }
+  .slider-pagination {
+    @media (min-width: 992px) {
+      display: none;
     }
   }
 }

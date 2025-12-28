@@ -1,0 +1,57 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-features {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+  }
+  &__grid {
+    @media (min-width: 768px) {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1366px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__slide {
+    height: auto !important;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+
+    transition: border-color 0.3s ease;
+    @include hover {
+      border-color: var(--primary);
+    }
+    @include tablet {
+      width: 390px !important;
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+  &__slide-icon {
+    display: block;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__slide-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0px 0px 15px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__slide-content {
+    margin: 0;
+  }
+}

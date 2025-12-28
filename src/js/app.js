@@ -8,6 +8,7 @@ import burger from "./files/burger.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import offsetLinesBody from "./files/offsetLinesBody.js";
 import widgetDocs from "./files/widgetDocs.js";
+import headerScroll from "./files/headerScroll.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   spoller();
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mediaAdaptive();
   offsetLinesBody();
   widgetDocs();
+  headerScroll();
 
   Fancybox.bind("[data-fancybox]", { closeButton: false });
   // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);

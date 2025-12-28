@@ -131,37 +131,63 @@ export default function sliders() {
     });
   }
 
-  const infoSlider = document.querySelector(".s-info__slider");
+  const stepsSlider = document.querySelector(".s-steps__slider");
 
-  if (infoSlider) {
-    const swiper = new Swiper(infoSlider, {
+  if (stepsSlider && window.matchMedia("(max-width: 991px)").matches) {
+    const swiper = new Swiper(stepsSlider, {
       speed: 900,
       spaceBetween: 20,
-      slidesPerView: 1,
-      // autoplay: {
-      //   delay: 4000,
-      // },
-      navigation: {
-        nextEl: ".s-info .slider-arrow._next",
-        prevEl: ".s-info .slider-arrow._prev",
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 3500,
       },
       pagination: {
-        el: ".s-info .slider-pagination",
+        el: ".s-steps .slider-pagination",
         clickable: true,
       },
-      breakpoints: {
-        1366: {
-          spaceBetween: 24,
-          slidesPerView: 4,
+    });
+  }
+
+  const contentSliders = document.querySelectorAll(
+    ".s-content__gallery-slider"
+  );
+
+  if (contentSliders.length) {
+    contentSliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 900,
+        spaceBetween: 20,
+        navigation: {
+          prevEl: slider
+            .closest(".s-content__gallery")
+            .querySelector(".slider-arrow._prev"),
+          nextEl: slider
+            .closest(".s-content__gallery")
+            .querySelector(".slider-arrow._next"),
         },
-        992: {
-          spaceBetween: 24,
-          slidesPerView: 3,
+        pagination: {
+          el: slider
+            .closest(".s-content__gallery")
+            .querySelector(".slider-pagination"),
+          clickable: true,
         },
-        576: {
-          spaceBetween: 20,
-          slidesPerView: 2,
-        },
+      });
+    });
+  }
+
+  const featuresSlider = document.querySelector(".s-features__slider");
+
+  if (featuresSlider && window.matchMedia("(max-width: 767px)").matches) {
+    const swiper = new Swiper(featuresSlider, {
+      speed: 900,
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 4200,
+      },
+      pagination: {
+        el: ".s-features .slider-pagination",
+        clickable: true,
       },
     });
   }
