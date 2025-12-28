@@ -1,0 +1,129 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+.s-doc {
+  @include laptop-min {
+    overflow: hidden;
+  }
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @include laptop-middle {
+        margin-bottom: 80px;
+      }
+      @include laptop-min {
+        margin-bottom: 70px;
+      }
+      @include tablet {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__slider-wrapper {
+    @media (min-width: 992px) {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__slider {
+    margin: -20px;
+    padding: 20px;
+    @include laptop-min {
+      margin: 0;
+      padding: 0;
+      overflow: visible !important;
+      width: 100%;
+    }
+  }
+  &__slide {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--dark);
+    height: auto !important;
+
+    @include laptop-min {
+      padding: 16px;
+      gap: 16px;
+    }
+    @include tablet {
+      width: 360px !important;
+      max-width: 100%;
+    }
+    @include hover {
+      .circle {
+        background-color: rgba(162, 221, 92, 0.1);
+      }
+    }
+
+    .info-doc {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      flex-shrink: 0;
+      width: 60px;
+      height: 76px;
+      background: url("@img/doc-frame.svg") 0 0 / 100% auto no-repeat;
+
+      text-align: center;
+
+      @include laptop-min {
+        width: 50px;
+        height: 66px;
+      }
+
+      .type {
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--primary);
+        @include laptop-min {
+          font-size: 12px;
+        }
+      }
+      .weight {
+        font-size: 12px;
+        line-height: 150%;
+        margin-bottom: 14px;
+        @include laptop-min {
+          font-size: 10px;
+        }
+      }
+    }
+    .name {
+      font-size: 18px;
+      flex: 1;
+      @include laptop {
+        font-size: 16px;
+      }
+      @include laptop-min {
+        font-size: 14px
+      }
+    }
+    .circle {
+      @include flex-center;
+      width: 50px;
+      height: 50px;
+      color: var(--primary);
+      border-radius: 50%;
+
+      transition: background-color 0.3s ease;
+
+      @include laptop-min {
+        width: 40px;
+        height: 40px;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        @include laptop-min {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

@@ -17,6 +17,11 @@
       display: none;
     }
   }
+  &._lap {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
 
   .swiper-pagination-bullet {
     margin: 0 !important;

@@ -191,4 +191,39 @@ export default function sliders() {
       },
     });
   }
+  const docSliders = document.querySelectorAll(".s-doc__slider");
+
+  if (docSliders.length) {
+    docSliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 900,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        navigation: {
+          nextEl: slider
+            .closest(".s-doc__block")
+            .querySelector(".slider-arrow._next"),
+          prevEl: slider
+            .closest(".s-doc__block")
+            .querySelector(".slider-arrow._prev"),
+        },
+        pagination: {
+          el: slider
+            .closest(".s-doc__block")
+            .querySelector(".slider-pagination"),
+          clickable: true,
+        },
+        breakpoints: {
+          1366: {
+            spaceBetween: 30,
+            slidesPerView: 3,
+          },
+          768: {
+            spaceBetween: 20,
+            slidesPerView: 2,
+          },
+        },
+      });
+    });
+  }
 }
