@@ -21,4 +21,12 @@
       }
     }
   }
+
+  a {
+    color: var(--primary);
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
 }

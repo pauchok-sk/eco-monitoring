@@ -130,4 +130,39 @@ export default function sliders() {
       });
     });
   }
+
+  const infoSlider = document.querySelector(".s-info__slider");
+
+  if (infoSlider) {
+    const swiper = new Swiper(infoSlider, {
+      speed: 900,
+      spaceBetween: 20,
+      slidesPerView: 1,
+      // autoplay: {
+      //   delay: 4000,
+      // },
+      navigation: {
+        nextEl: ".s-info .slider-arrow._next",
+        prevEl: ".s-info .slider-arrow._prev",
+      },
+      pagination: {
+        el: ".s-info .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1366: {
+          spaceBetween: 24,
+          slidesPerView: 4,
+        },
+        992: {
+          spaceBetween: 24,
+          slidesPerView: 3,
+        },
+        576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+      },
+    });
+  }
 }

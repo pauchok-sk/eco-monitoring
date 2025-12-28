@@ -1,0 +1,35 @@
+.s-steps {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    row-gap: 40px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    z-index: 1;
+
+    .num {
+      position: absolute;
+      font-weight: 800;
+      font-size: 120px;
+      color: var(--primary);
+      left: 0;
+      z-index: -1;
+    }
+    .descr {
+      display: flex;
+      align-items: center;
+      min-height: 250px;
+      line-height: 150%;
+      padding: 30px;
+      margin-left: 45px;
+
+      backdrop-filter: blur(8px);
+      background: rgba(40, 40, 40, 0.7);
+    }
+  }
+}
