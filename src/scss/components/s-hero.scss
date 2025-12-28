@@ -83,7 +83,7 @@
     @include laptop-min {
       width: 500px;
       margin: 0 auto 25px auto;
-    
+
       &._desk {
         display: none;
       }
@@ -91,6 +91,33 @@
     @media (min-width: 992px) {
       &._mob {
         display: none;
+      }
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 10px;
+    background: var(--dark);
+    padding: 20px;
+    width: 670px;
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+
+      line-height: 150%;
+      &::before {
+        margin-top: 6px;
+        display: block;
+        border-radius: 50%;
+        flex-shrink: 0;
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: var(--primary);
       }
     }
   }
