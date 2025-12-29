@@ -47,7 +47,10 @@
     }
   }
   &__title {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
   &__form {
     width: 100%;
@@ -58,5 +61,10 @@
     .btn-s {
       width: 100%;
     }
+  }
+}
+.modal-dest {
+  &__content {
+    color: rgba(255, 255, 255, 0.5);
   }
 }

@@ -25,6 +25,12 @@
 
     z-index: 1;
 
+    &._simple {
+      .descr {
+        min-height: 165px;
+      }
+    }
+
     @include laptop-min {
       width: 390px !important;
       max-width: 100%;
@@ -49,6 +55,7 @@
       line-height: 150%;
       padding: 30px;
       margin-left: 45px;
+      width: 100%;
 
       backdrop-filter: blur(8px);
       background: rgba(40, 40, 40, 0.7);

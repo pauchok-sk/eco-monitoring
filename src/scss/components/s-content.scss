@@ -54,12 +54,14 @@
     }
   }
   &__gallery {
-    position: sticky;
-    top: 100px;
     width: fit-content;
     max-width: 100%;
     flex-shrink: 0;
 
+    @media (min-width: 992px) {
+      position: sticky;
+      top: 100px;
+    }
     @include laptop-min {
       margin: 0 auto;
     }

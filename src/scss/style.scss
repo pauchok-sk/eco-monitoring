@@ -21,6 +21,7 @@
 @use "./ui/breadcrumbs";
 @use "./ui/nav-slider";
 @use "./ui/content";
+@use "./ui/card-ecobox";
 
 // widgets
 @use "./widgets/modal";
@@ -45,5 +46,8 @@
 @use "./components/s-content";
 @use "./components/s-features";
 @use "./components/s-doc";
+@use "./components/s-trump";
+@use "./components/s-archive";
+@use "./components/s-descr";
 
 @use "./components/footer";

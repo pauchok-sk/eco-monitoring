@@ -1,0 +1,97 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.card-ecobox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--dark-m);
+
+  font-size: 15px;
+  &__gallery {
+    @include flex-center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0px 0px 10px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__content {
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0px 0px 20px 0px;
+  }
+  &__list {
+    margin: auto 0px 20px 0px;
+    li {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      padding: 7px 0px;
+      border-top: 1px solid var(--border-color);
+
+      &:last-child {
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .name {
+        color: rgba(255, 255, 255, 0.5);
+        width: 100px;
+        flex-shrink: 0;
+      }
+      .value {
+        flex: 1;
+      }
+    }
+  }
+  &__dest-btn {
+    display: block;
+    width: fit-content;
+    margin-bottom: 20px;
+
+    color: var(--primary);
+    line-height: 150%;
+    text-decoration: underline;
+
+    @include hover {
+      text-decoration: none;
+    }
+  }
+  &__price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  &__price-item {
+    .price {
+      font-size: 22px;
+      margin-bottom: 2px;
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+    .sub {
+      display: block;
+      font-size: 14px;
+      line-height: 150%;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__btn {
+    width: 100%;
+  }
+}

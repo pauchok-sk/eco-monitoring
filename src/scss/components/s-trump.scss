@@ -1,0 +1,40 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-trump {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    padding: 30px;
+    background-color: var(--dark-m);
+    @include laptop-middle {
+      padding: 20px;
+    }
+  }
+  &__item-icon {
+    display: block;
+    width: 35px;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__item-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 0px 15px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__item-content {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

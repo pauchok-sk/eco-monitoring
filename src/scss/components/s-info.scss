@@ -11,6 +11,13 @@
   &__content {
     color: rgba(255, 255, 255, 0.5);
   }
+  &__slider {
+    &._simple {
+      .s-info__slide  {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
   &__slider-wrapper {
     display: flex;
     align-items: center;
@@ -45,9 +52,11 @@
 
     transition: border-color 0.3s ease;
 
+    @include laptop-middle {
+      padding: 20px;
+    }
     @include tablet {
       font-size: 16px;
-      padding: 20px;
     }
     @include hover {
       border-color: var(--primary);

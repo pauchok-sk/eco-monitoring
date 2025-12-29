@@ -55,6 +55,9 @@
     .btn-s {
       width: 100%;
 
+      &._outline {
+        color: var(--primary) !important;
+      }
       svg {
         width: 26px;
         height: 26px;
@@ -66,6 +69,24 @@
         }
       }
     }
+
+    &._accountant {
+      grid-template-columns: auto 1fr 1fr;
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+
+        .btn-s {
+          &:first-child {
+            grid-column: 2 span;
+          }
+        }
+      }
+      @include tablet-min {
+        .btn-s {
+          grid-column: 2 span;
+        }
+      }
+    }
   }
   &__img {
     display: block;
@@ -74,6 +95,10 @@
     aspect-ratio: 1/1;
     object-fit: cover;
 
+    @media (min-width: 992px) {
+      position: sticky;
+      top: 100px;
+    }
     @include laptop-middle {
       width: 400px;
     }
@@ -101,7 +126,15 @@
     row-gap: 10px;
     background: var(--dark);
     padding: 20px;
-    width: 670px;
+    width: 100%;
+    max-width: 670px;
+    margin-bottom: 50px;
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
 
     li {
       display: flex;
@@ -119,6 +152,40 @@
         height: 6px;
         background: var(--primary);
       }
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 50px;
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      gap: 20px;
+      row-gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .rect {
+      padding: 20px;
+      background-color: var(--dark);
+      flex-shrink: 0;
+
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--primary);
+
+      @include tablet {
+        font-size: 18px;
+        padding: 15px;
+      }
+    }
+    .content {
+      flex: 0 1 400px;
+      color: rgba(255, 255, 255, 0.5);
     }
   }
 }

@@ -55,3 +55,10 @@
     font-size: 24px;
   }
 }
+.f-title {
+  font-weight: 600;
+  font-size: 20px;
+  @include tablet {
+    font-size: 18px;
+  }
+}

@@ -226,4 +226,41 @@ export default function sliders() {
       });
     });
   }
+
+  const infoSlider = document.querySelector(".s-info__slider");
+
+  if (infoSlider) {
+    const isSimple = infoSlider.classList.contains("_simple");
+
+    const swiper = new Swiper(infoSlider, {
+      speed: 900,
+      spaceBetween: 20,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 3500,
+      },
+      pagination: {
+        el: ".s-info .slider-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".s-info .slider-arrow._next",
+        prevEl: ".s-info .slider-arrow._prev",
+      },
+      breakpoints: {
+        1366: {
+          spaceBetween: 24,
+          slidesPerView: isSimple ? 3 : 4,
+        },
+        992: {
+          spaceBetween: 24,
+          slidesPerView: 3,
+        },
+        700: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+      },
+    });
+  }
 }
