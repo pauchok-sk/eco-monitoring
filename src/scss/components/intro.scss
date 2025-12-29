@@ -150,7 +150,9 @@
 
     color: white;
 
-    transition: background-color 0.3s ease, opacity .3s ease;
+    transition:
+      background-color 0.3s ease,
+      opacity 0.3s ease;
 
     @include hover {
       background-color: rgba(0, 0, 0, 0.8);
@@ -177,5 +179,11 @@
     @include tablet {
       bottom: 20px !important;
     }
+  }
+  &__content-wrapper {
+  }
+  &__info {
+  }
+  &__content {
   }
 }

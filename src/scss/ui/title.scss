@@ -1,6 +1,25 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 
+.m-title {
+  font-weight: 600;
+  font-size: 56px;
+  margin: 0px 0px 40px 0px;
+  @include laptop {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  @include laptop-min {
+    font-size: 42px;
+  }
+  @include tablet {
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+  @include tablet-min {
+    font-size: 32px;
+  }
+}
 .s-title {
   position: relative;
   font-weight: 600;
