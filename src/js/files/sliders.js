@@ -263,4 +263,32 @@ export default function sliders() {
       },
     });
   }
+
+  const certificatesSlider = document.querySelector(".s-certificates__slider");
+
+  if (certificatesSlider) {
+    const swiper = new Swiper(certificatesSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      pagination: {
+        el: ".s-certificates .slider-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".s-certificates .slider-arrow._next",
+        prevEl: ".s-certificates .slider-arrow._prev",
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
 }

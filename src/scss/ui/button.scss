@@ -134,3 +134,63 @@
     height: 33px;
   }
 }
+
+.btn-play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+
+  text-align: center;
+
+  @include hover {
+    .circle {
+      color: white;
+
+      &::before {
+        inset: -6px;
+      }
+    }
+  }
+
+  .circle {
+    @include flex-center;
+    position: relative;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    z-index: 1;
+
+    transition: color .3s ease;
+
+    @include tablet {
+      width: 100px;
+      height: 100px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 100%;
+      background-color: var(--primary);
+      border-radius: 50%;
+
+      transition: inset .3s ease-in-out;
+      z-index: -1;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      @include tablet {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

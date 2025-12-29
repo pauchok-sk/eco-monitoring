@@ -1,0 +1,45 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-certificates {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider-wrapper {
+    @media (min-width: 992px) {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    position: relative;
+    aspect-ratio: 1/1.41;
+    overflow: hidden;
+
+    @include tablet {
+      width: 320px !important;
+      max-width: 100%;
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform 0.3s linear;
+    }
+  }
+}

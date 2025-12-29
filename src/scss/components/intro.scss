@@ -181,9 +181,23 @@
     }
   }
   &__content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
   &__info {
+    flex: 0 1 900px;
+    @include tablet {
+      flex: auto;
+      width: 100%;
+    }
   }
   &__content {
+  }
+  &__btn-play {
+    margin: 0 auto;
   }
 }
