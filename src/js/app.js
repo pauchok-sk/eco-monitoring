@@ -11,6 +11,7 @@ import widgetDocs from "./files/widgetDocs.js";
 import headerScroll from "./files/headerScroll.js";
 import ecoboxDest from "./files/ecoboxDest.js";
 import requestEcobox from "./files/requestEcobox.js";
+import map from "./files/map.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   spoller();
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   headerScroll();
   ecoboxDest();
   requestEcobox();
+  map();
 
   Fancybox.bind("[data-fancybox]", { closeButton: false });
   // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);

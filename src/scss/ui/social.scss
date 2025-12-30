@@ -15,7 +15,7 @@
 
   color: var(--primary);
 
-  transition: color .3s ease;
+  transition: color 0.3s ease;
   @include laptop-min {
     width: 25px;
     height: 25px;
@@ -27,5 +27,38 @@
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+.social-circles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.social-circle {
+  @include flex-center;
+  border-radius: 50%;
+  color: var(--dark-m);
+  background-color: var(--primary);
+  width: 48px;
+  height: 48px;
+
+  transition: background-color .3s ease;
+  @include hover {
+    background-color: var(--primary-d);
+  }
+  @include tablet {
+    width: 38px;
+    height: 38px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

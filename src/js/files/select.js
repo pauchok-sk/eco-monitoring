@@ -12,9 +12,23 @@ export default function select() {
 
     selects.forEach((select) => {
       const btn = select.querySelector(".select-btn");
+      const items = select.querySelectorAll(".select-item");
+      const input = select.querySelector(".select-input");
       select.addEventListener("click", (e) => e.stopPropagation());
 
       handlerItems(select);
+
+      input.addEventListener("input", (e) => {
+        const value = e.target.value.toLowerCase();
+
+        items.forEach(item => {
+          if (item.textContent.toLowerCase().includes(value)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        })
+      })
 
       btn.addEventListener("click", () => {
         if (select.classList.contains("_open")) {
@@ -40,7 +54,7 @@ export function handlerItems(select) {
       items.forEach((i) => i.classList.remove("_active"));
       item.classList.add("_active");
 
-      input.value = item.textContent;
+      input.value = item.textContent.replace(/\s+/g, ' ').trim();
 
       handleClose(select);
     });

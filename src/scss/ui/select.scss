@@ -35,8 +35,11 @@
   }
 }
 .select-input {
+  cursor: pointer;
   padding-right: 50px;
-  pointer-events: none;
+  &:read-only {
+    pointer-events: none;
+  }
 }
 .select-body {
   position: absolute;
@@ -51,7 +54,10 @@
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
 
   &::-webkit-scrollbar {
     width: 3px;
