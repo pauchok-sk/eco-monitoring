@@ -10,6 +10,7 @@ import offsetLinesBody from "./files/offsetLinesBody.js";
 import widgetDocs from "./files/widgetDocs.js";
 import headerScroll from "./files/headerScroll.js";
 import ecoboxDest from "./files/ecoboxDest.js";
+import requestEcobox from "./files/requestEcobox.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   spoller();
@@ -23,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   widgetDocs();
   headerScroll();
   ecoboxDest();
+  requestEcobox();
 
   Fancybox.bind("[data-fancybox]", { closeButton: false });
-  // Fancybox.show([{ type: "inline", src: "#modal-dest" }]);
+  // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);
 });

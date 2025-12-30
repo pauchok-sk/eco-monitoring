@@ -50,6 +50,9 @@
 
     transition: color .3s ease;
 
+    @include tablet {
+      font-size: 16px;
+    }
     @include hover {
       color: var(--primary);
     }
