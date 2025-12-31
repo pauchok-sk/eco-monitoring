@@ -802,6 +802,9 @@
                 });
                 navigator.clipboard.writeText(value).then(() => {
                     tooltip.show();
+                    setTimeout(() => {
+                        tooltip.hide();
+                    }, 1e3);
                 });
             });
         });

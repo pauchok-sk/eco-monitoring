@@ -13,6 +13,10 @@ export default function copy() {
 
         navigator.clipboard.writeText(value).then(() => {
           tooltip.show();
+
+          setTimeout(() => {
+            tooltip.hide();
+          }, 1000);
         });
       });
     });
