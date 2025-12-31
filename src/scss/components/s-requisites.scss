@@ -1,6 +1,90 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
 .s-requisites {
   &__items {
   }
   &__item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--border-color);
+    gap: 40px;
+
+    line-height: 150%;
+
+    transition: background-color 0.3s ease;
+
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 20px;
+      padding: 15px 0px;
+    }
+    @include tablet-min {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    @include hover {
+      background-color: #393939;
+      .copy-btn {
+        opacity: 1;
+      }
+    }
+
+    .value,
+    .name {
+      flex: 1;
+      @include laptop-min {
+        width: 100%;
+        flex: auto;
+      }
+    }
+    .name {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      opacity: 0;
+      flex-shrink: 0;
+      width: fit-content;
+
+      color: var(--primary);
+
+      transition:
+        opacity 0.3s ease,
+        color 0.3s ease;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      @include hover {
+        color: var(--primary-d);
+      }
+      @include laptop-min {
+        opacity: 1;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        span {
+          display: none;
+        }
+      }
+      @include tablet-min {
+        span {
+          display: block;
+        }
+      }
+    }
   }
 }

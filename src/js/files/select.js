@@ -21,14 +21,14 @@ export default function select() {
       input.addEventListener("input", (e) => {
         const value = e.target.value.toLowerCase();
 
-        items.forEach(item => {
+        items.forEach((item) => {
           if (item.textContent.toLowerCase().includes(value)) {
             item.style.display = "block";
           } else {
             item.style.display = "none";
           }
-        })
-      })
+        });
+      });
 
       btn.addEventListener("click", () => {
         if (select.classList.contains("_open")) {
@@ -39,6 +39,7 @@ export default function select() {
       });
 
       function handleOpen(select) {
+        selects.forEach((s) => s.classList.remove("_open"));
         select.classList.add("_open");
       }
     });
@@ -54,7 +55,7 @@ export function handlerItems(select) {
       items.forEach((i) => i.classList.remove("_active"));
       item.classList.add("_active");
 
-      input.value = item.textContent.replace(/\s+/g, ' ').trim();
+      input.value = item.textContent.replace(/\s+/g, " ").trim();
 
       handleClose(select);
     });
