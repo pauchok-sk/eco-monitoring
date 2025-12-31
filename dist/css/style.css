@@ -997,6 +997,9 @@ textarea.input {
 .card-ecobox__btn {
   width: 100%
 }
+.tippy-box {
+  background-color: var(--dark-m)
+}
 .fancybox__backdrop {
   backdrop-filter: blur(30px);
   background: rgba(0,0,0,.3)
