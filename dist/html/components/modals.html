@@ -1,0 +1,111 @@
+<aside>
+	<div class="modal" id="modal-connect">
+		<div class="modal__body">
+			<div data-fancybox-close class="modal__close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</div>
+			<div class="t-title modal__title">Оставить заявку</div>
+			<div data-items-select="Утилизация отходов,Бухгалтерское сопровождение,Экологическое сопровождение,Рекультивационные мероприятия,Прием ртутных ламп,Утилизация отходов, Бухгалтерское сопровождение,Экологическое сопровождение,Рекультивационные мероприятия,Прием ртутных ламп">
+				<form action="#" class="modal__form">
+					<div class="input-control">
+						<input type="text" placeholder="Имя" class="input" />
+					</div>
+					<div class="select select-items">
+						<div class="select-btn">
+							<input type="text" placeholder="Выберите тип услуги" readonly class="input select-input" />
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-down"></use>
+							</svg>
+						</div>
+						<div class="select-body"></div>
+					</div>
+					<div class="input-control">
+						<input type="tel" placeholder="Телефон" class="input" />
+					</div>
+					<div class="check-wrapper _light">
+						<span class="wpcf7-form-control-wrap" data-name="acceptance-227">
+							<span class="wpcf7-form-control wpcf7-acceptance">
+								<span class="wpcf7-list-item">
+									<label>
+										<input type="checkbox" name="acceptance-227" value="1" aria-invalid="false" />
+										<span class="wpcf7-list-item-label">
+											<span>
+												Я соглашаюсь с
+												<a href="/personal-data" target="_blank">
+													Политикой обработки персональных данных
+												</a>
+												и
+												<a href="/privacy-policy" target="_blank">
+													Политикой конфиденциальности
+												</a>
+											</span>
+										</span>
+									</label>
+								</span>
+							</span>
+						</span>
+					</div>
+					<button type="submit" class="btn-s">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-dest">
+		<div class="modal__body">
+			<div data-fancybox-close class="modal__close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</div>
+			<div class="f-title modal__title" id="modal-dest-title"></div>
+			<div class="content modal-dest__content" id="modal-dest-content"></div>
+		</div>
+	</div>
+	<div class="modal" id="modal-request-ecobox">
+		<div class="modal__body">
+			<div data-fancybox-close class="modal__close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</div>
+			<div class="t-title modal__title">Оставить заявку</div>
+			<form action="#" class="modal__form">
+				<div style="display: none;">
+					<input type="text" id="input-ecobox">
+				</div>
+				<div class="input-control">
+					<input type="text" placeholder="Имя" class="input" />
+				</div>
+				<div class="input-control">
+					<input type="tel" placeholder="Телефон" class="input" />
+				</div>
+				<div class="check-wrapper _light">
+					<span class="wpcf7-form-control-wrap" data-name="acceptance-227">
+						<span class="wpcf7-form-control wpcf7-acceptance">
+							<span class="wpcf7-list-item">
+								<label>
+									<input type="checkbox" name="acceptance-227" value="1" aria-invalid="false" />
+									<span class="wpcf7-list-item-label">
+										<span>
+											Я соглашаюсь с
+											<a href="/personal-data" target="_blank">
+												Политикой обработки персональных данных
+											</a>
+											и
+											<a href="/privacy-policy" target="_blank">
+												Политикой конфиденциальности
+											</a>
+										</span>
+									</span>
+								</label>
+							</span>
+						</span>
+					</span>
+				</div>
+				<button type="submit" class="btn-s">Отправить</button>
+			</form>
+		</div>
+	</div>
+</aside>

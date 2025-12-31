@@ -1,0 +1,645 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Эконадзор</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20251231195125" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251231195125">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251231195125">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251231195125" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<div class="header-t">
+		<div class="container">
+			<div class="header-t__wrapper">
+				<nav class="header-t__nav">
+					<ul class="list header-t__list">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Пресс-релизы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<a href="#modal-connect" data-fancybox class="header-t__btn">Оставить заявку</a>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo" />
+				</a>
+				<div class="header__contacts">
+					<div class="header__contacts-info">
+						<span class="address">
+							628401, ХМАО – Югра, г.Сургут, ул. Щепеткина, 50/2
+						</span>
+						<span class="work-time">пн-пт с 9:00 до 17:00, сб-вс - выходной</span>
+					</div>
+					<a href="tel:83462555512" class="header__tel">8 (3462) 55-55-12</a>
+					<div class="social">
+						<a href="#" target="_blank" rel="nofollow" class="social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" rel="nofollow" class="social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-max"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header__burger-btn" id="burger-open">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="header-services">
+		<div class="container">
+			<div class="header-services__slider-wrapper">
+				<div class="swiper header-services__slider">
+					<div class="swiper-wrapper">
+						<a href="#" class="swiper-slide header-services__slide">Утилизация отходов</a>
+						<a href="#" class="swiper-slide header-services__slide">Бухгалтерское сопровождение</a>
+						<a href="#" class="swiper-slide header-services__slide">Экологическое сопровождение</a>
+						<a href="#" class="swiper-slide header-services__slide">Рекультивационные мероприятия</a>
+						<a href="#" class="swiper-slide header-services__slide">Прием ртутных ламп</a>
+						<a href="#" class="swiper-slide header-services__slide">Утилизация отходов</a>
+						<a href="#" class="swiper-slide header-services__slide">Бухгалтерское сопровождение</a>
+						<a href="#" class="swiper-slide header-services__slide">Экологическое сопровождение</a>
+						<a href="#" class="swiper-slide header-services__slide">Рекультивационные мероприятия</a>
+						<a href="#" class="swiper-slide header-services__slide">Прием ртутных ламп</a>
+					</div>
+				</div>
+				<div class="header-services__next-btn">
+					<svg>
+						<use xlink:href='img/icons/icons.svg#icon-next'></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<aside>
+		<div class="burger-overlay" id="burger-overlay"></div>
+		<div class="burger" id="burger">
+			<div class="burger__body">
+				<div class="burger__head">
+					<a href="/" class="burger__logo">
+						<img src="img/logo.svg" alt="logo" />
+					</a>
+					<div class="burger__close" id="burger-close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-close"></use>
+						</svg>
+					</div>
+				</div>
+				<ul class="list burger__list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Пресс-релизы</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="burger__services-btn" id="burger-services-open">
+					<span>Услуги</span>
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-next"></use>
+					</svg>
+				</div>
+				<div class="burger__contacts">
+					<div class="burger__address">
+						628401, ХМАО – Югра, г.Сургут, ул. Щепеткина, 50/2
+					</div>
+					<div class="burger__work-time">
+						пн-пт с 9:00 до 17:00, сб-вс - выходной
+					</div>
+					<a href="tel:83462555512" class="burger__tel">8 (3462) 55-55-12</a>
+					<div class="social">
+						<a href="#" target="_blank" rel="nofollow" class="social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" rel="nofollow" class="social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-max"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="burger__services" id="burger-services">
+					<div class="burger__services-prev" id="burger-services-prev">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-prev"></use>
+						</svg>
+						<span>Назад</span>
+					</div>
+					<ul class="list burger__services-list">
+						<li><a href="#">Утилизация отходов</a></li>
+						<li><a href="#">Бухгалтерское сопровождение</a></li>
+						<li><a href="#">Экологическое сопровождение</a></li>
+						<li><a href="#">Рекультивационные мероприятия</a></li>
+						<li><a href="#">Прием ртутных ламп</a></li>
+						<li><a href="#">Утилизация отходов</a></li>
+						<li><a href="#">Бухгалтерское сопровождение</a></li>
+						<li><a href="#">Экологическое сопровождение</a></li>
+						<li><a href="#">Рекультивационные мероприятия</a></li>
+						<li><a href="#">Прием ртутных ламп</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	<main>
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="aioseo-breadcrumbs">
+					<span class="aioseo-breadcrumb">
+						<a href="https://usadbatishina.ru" title="Главная">Главная</a>
+					</span>
+					<span class="aioseo-breadcrumb-separator">></span>
+					<span class="aioseo-breadcrumb">
+						Пресс-релиз
+					</span>
+				</div>
+			</div>
+		</div>
+		<section class="sect-p bg-dark-m s-archive-news">
+			<div class="container">
+				<div class="sect-head">
+					<h1 class="s-title">Пресс-релиз</h1>
+				</div>
+				<div class="s-archive-news__grid">
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								К 1 декабря регионы должны представить планы по закупке техники для
+								вывоза отходов на 2026–2028 год
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								В Сургуте мусорные площадки завалило шинами
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								К 1 декабря регионы должны представить планы по закупке техники для
+								вывоза отходов на 2026–2028 год
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								В Сургуте мусорные площадки завалило шинами
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								К 1 декабря регионы должны представить планы по закупке техники для
+								вывоза отходов на 2026–2028 год
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								В Сургуте мусорные площадки завалило шинами
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								К 1 декабря регионы должны представить планы по закупке техники для
+								вывоза отходов на 2026–2028 год
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								В Сургуте мусорные площадки завалило шинами
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								К 1 декабря регионы должны представить планы по закупке техники для
+								вывоза отходов на 2026–2028 год
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								В Сургуте мусорные площадки завалило шинами
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								К 1 декабря регионы должны представить планы по закупке техники для
+								вывоза отходов на 2026–2028 год
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="card-new">
+						<div class="card-new__gallery">
+							<img src="img/card-new.jpg" alt="image" />
+							<div class="card-new__date">06.11.2025</div>
+						</div>
+						<div class="card-new__body">
+							<h5 class="card-new__title">
+								В Сургуте мусорные площадки завалило шинами
+							</h5>
+							<div class="card-new__btn btn-s _outline">
+								<span>Читать подробнее</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="s-archive-news__bottom">
+					<div class="s-archive-news__btn-more">
+						<span>Показать ещё</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-return"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<aside>
+		<div class="modal" id="modal-connect">
+			<div class="modal__body">
+				<div data-fancybox-close class="modal__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</div>
+				<div class="t-title modal__title">Оставить заявку</div>
+				<div data-items-select="Утилизация отходов,Бухгалтерское сопровождение,Экологическое сопровождение,Рекультивационные мероприятия,Прием ртутных ламп,Утилизация отходов, Бухгалтерское сопровождение,Экологическое сопровождение,Рекультивационные мероприятия,Прием ртутных ламп">
+					<form action="#" class="modal__form">
+						<div class="input-control">
+							<input type="text" placeholder="Имя" class="input" />
+						</div>
+						<div class="select select-items">
+							<div class="select-btn">
+								<input type="text" placeholder="Выберите тип услуги" readonly class="input select-input" />
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-down"></use>
+								</svg>
+							</div>
+							<div class="select-body"></div>
+						</div>
+						<div class="input-control">
+							<input type="tel" placeholder="Телефон" class="input" />
+						</div>
+						<div class="check-wrapper _light">
+							<span class="wpcf7-form-control-wrap" data-name="acceptance-227">
+								<span class="wpcf7-form-control wpcf7-acceptance">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="checkbox" name="acceptance-227" value="1" aria-invalid="false" />
+											<span class="wpcf7-list-item-label">
+												<span>
+													Я соглашаюсь с
+													<a href="/personal-data" target="_blank">
+														Политикой обработки персональных данных
+													</a>
+													и
+													<a href="/privacy-policy" target="_blank">
+														Политикой конфиденциальности
+													</a>
+												</span>
+											</span>
+										</label>
+									</span>
+								</span>
+							</span>
+						</div>
+						<button type="submit" class="btn-s">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="modal-dest">
+			<div class="modal__body">
+				<div data-fancybox-close class="modal__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</div>
+				<div class="f-title modal__title" id="modal-dest-title"></div>
+				<div class="content modal-dest__content" id="modal-dest-content"></div>
+			</div>
+		</div>
+		<div class="modal" id="modal-request-ecobox">
+			<div class="modal__body">
+				<div data-fancybox-close class="modal__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</div>
+				<div class="t-title modal__title">Оставить заявку</div>
+				<form action="#" class="modal__form">
+					<div style="display: none;">
+						<input type="text" id="input-ecobox">
+					</div>
+					<div class="input-control">
+						<input type="text" placeholder="Имя" class="input" />
+					</div>
+					<div class="input-control">
+						<input type="tel" placeholder="Телефон" class="input" />
+					</div>
+					<div class="check-wrapper _light">
+						<span class="wpcf7-form-control-wrap" data-name="acceptance-227">
+							<span class="wpcf7-form-control wpcf7-acceptance">
+								<span class="wpcf7-list-item">
+									<label>
+										<input type="checkbox" name="acceptance-227" value="1" aria-invalid="false" />
+										<span class="wpcf7-list-item-label">
+											<span>
+												Я соглашаюсь с
+												<a href="/personal-data" target="_blank">
+													Политикой обработки персональных данных
+												</a>
+												и
+												<a href="/privacy-policy" target="_blank">
+													Политикой конфиденциальности
+												</a>
+											</span>
+										</span>
+									</label>
+								</span>
+							</span>
+						</span>
+					</div>
+					<button type="submit" class="btn-s">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</aside>
+
+	<footer class="footer">
+		<div class="footer__head">
+			<div class="container">
+				<a href="/" class="footer__logo">
+					<img src="img/logo.svg" alt="logo" />
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__body">
+					<div class="footer__contacts">
+						<div class="footer__contacts-row">
+							<div class="footer__contacts-item">
+								<div class="footer__title">Телефон для связи</div>
+								<a href="tel:83462555512" class="footer__tel">
+									8 (3462) 55-55-12
+								</a>
+							</div>
+							<div class="footer__contacts-item">
+								<div class="footer__title">Мессенджеры</div>
+								<div class="social">
+									<a href="#" target="_blank" rel="nofollow" class="social-btn">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+										</svg>
+									</a>
+									<a href="#" target="_blank" rel="nofollow" class="social-btn">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-max"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer__contacts-row">
+							<div class="footer__contacts-item">
+								<div class="footer__title">Адрес офиса</div>
+								<div class="footer__address">
+									ХМАО – Югра, г.Сургут, ул. Щепеткина, 50/2
+									<br />
+									<span>пн-пт с 9:00 до 17:00, сб-вс - выходной</span>
+								</div>
+							</div>
+							<div class="footer__contacts-item">
+								<div class="footer__title">Email</div>
+								<a href="mailto:ooo@econadzor.com" class="footer__mail">
+									ooo@econadzor.com
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__body">
+					<div class="footer__title">О компании</div>
+					<ul class="list footer__list">
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Наши реквизиты</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__body">
+					<div class="footer__title">Услуги</div>
+					<ul class="list footer__list _grid">
+						<li>
+							<a href="#">Обезвреживание и утилизация ртутьсодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация ртутьсодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация нефтесодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация нефтесодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация ртутьсодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация ртутьсодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация нефтесодержащих отходов</a>
+						</li>
+						<li>
+							<a href="#">Обезвреживание и утилизация нефтесодержащих отходов</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<div class="footer__bottom-wrapper">
+					<div class="footer__copyright">© Эконадзор, 2010-2025</div>
+					<ul class="list footer__bottom-list">
+						<li><a href="#" target="_blank">Политика конфиденциальности</a></li>
+						<li>
+							<a href="#" target="_blank">
+								Правила обработки персональных данных
+							</a>
+						</li>
+					</ul>
+					<a href="https://qorix.ru/" target="_blank" class="footer__dev">
+						<span>Разработка сайта —</span>
+						<img src="img/qorix.svg" alt="logo" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./files/fancybox/fancybox.min.js?_v=20251231195125"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251231195125"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251231195125"></script>
+	<script src="./files/tippy/popper.min.js?_v=20251231195125"></script>
+	<script src="./files/tippy/tippy.min.js?_v=20251231195125"></script>
+
+	<script src="js/app.min.js?_v=20251231195125"></script>
+</body>
+
+</html>
