@@ -145,12 +145,24 @@
 
   text-align: center;
 
+  transition: opacity .3s ease;
+
   @include hover {
     .circle {
       color: white;
+      background-color: var(--primary);
+    }
+  }
 
-      &::before {
-        inset: -6px;
+  &._active {
+    .circle {
+      &::before,
+      &::after {
+        display: block;
+      }
+
+      svg {
+        display: none;
       }
     }
   }
@@ -167,22 +179,13 @@
     overflow: hidden;
     z-index: 1;
 
-    transition: color .3s ease;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
 
     @include tablet {
       width: 100px;
       height: 100px;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      inset: 100%;
-      background-color: var(--primary);
-      border-radius: 50%;
-
-      transition: inset .3s ease-in-out;
-      z-index: -1;
     }
 
     svg {
@@ -192,6 +195,23 @@
         width: 24px;
         height: 24px;
       }
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 24px;
+      display: none;
+      background-color: currentColor;
+      border-radius: 4px;
+    }
+    &::before {
+      transform: translateX(-6px)
+    }
+    &::after {
+      transform: translateX(6px)
     }
   }
 }

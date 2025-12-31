@@ -105,8 +105,17 @@
     @include flex-center;
     position: relative;
     flex: 0 1 300px;
+    z-index: 1;
+
+    @include hover {
+      .btn-play {
+        opacity: 1 !important;
+      }
+    }
 
     .btn-play {
+      position: relative;
+      z-index: 10;
       .circle {
         width: 70px;
         height: 70px;
@@ -114,6 +123,9 @@
           width: 24px;
           height: 24px;
         }
+      }
+      &._active {
+        opacity: 0;
       }
     }
     @include tablet {
@@ -123,6 +135,21 @@
     @include tablet-min {
       width: 100%;
       flex: auto;
+    }
+  }
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    &._played {
+      opacity: 1;
     }
   }
   &__gallery-btn {

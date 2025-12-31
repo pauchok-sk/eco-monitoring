@@ -327,7 +327,15 @@ img {
   cursor: pointer;
   gap: 15px;
   flex-shrink: 0;
-  text-align: center
+  text-align: center;
+  transition: opacity .3s ease
+}
+.btn-play._active .circle::after,
+.btn-play._active .circle::before {
+  display: block
+}
+.btn-play._active .circle svg {
+  display: none
 }
 .btn-play .circle {
   display: flex;
@@ -342,20 +350,29 @@ img {
   height: 130px;
   overflow: hidden;
   z-index: 1;
-  transition: color .3s ease
-}
-.btn-play .circle::before {
-  position: absolute;
-  content: "";
-  inset: 100%;
-  background-color: var(--primary);
-  border-radius: 50%;
-  transition: inset .3s ease-in-out;
-  z-index: -1
+  transition: color .3s ease,background-color .3s ease
 }
 .btn-play .circle svg {
   width: 32px;
   height: 32px
+}
+.btn-play .circle::after,
+.btn-play .circle::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 24px;
+  display: none;
+  background-color: currentColor;
+  border-radius: 4px
+}
+.btn-play .circle::before {
+  -webkit-transform: translateX(-6px);
+  transform: translateX(-6px)
+}
+.btn-play .circle::after {
+  -webkit-transform: translateX(6px);
+  transform: translateX(6px)
 }
 .list {
   padding-left: 0;
@@ -2270,7 +2287,12 @@ textarea.input {
   align-items: center;
   justify-content: center;
   position: relative;
-  flex: 0 1 300px
+  flex: 0 1 300px;
+  z-index: 1
+}
+.s-contacts__gallery .btn-play {
+  position: relative;
+  z-index: 10
 }
 .s-contacts__gallery .btn-play .circle {
   width: 70px;
@@ -2279,6 +2301,23 @@ textarea.input {
 .s-contacts__gallery .btn-play .circle svg {
   width: 24px;
   height: 24px
+}
+.s-contacts__gallery .btn-play._active {
+  opacity: 0
+}
+.s-contacts__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .3s ease
+}
+.s-contacts__video._played {
+  opacity: 1
 }
 .s-contacts__gallery-btn {
   position: absolute;
@@ -3512,10 +3551,8 @@ textarea.input {
     text-decoration: none
   }
   .btn-play:hover .circle {
-    color: #fff
-  }
-  .btn-play:hover .circle::before {
-    inset: -6px
+    color: #fff;
+    background-color: var(--primary)
   }
   .social-btn:hover {
     color: var(--primary-d)
@@ -3648,6 +3685,9 @@ textarea.input {
   .s-contacts__tel:hover {
     color: var(--primary)
   }
+  .s-contacts__gallery:hover .btn-play {
+    opacity: 1!important
+  }
   .s-contacts__gallery-btn:hover {
     background-color: rgba(0,0,0,.3)
   }
@@ -3697,10 +3737,8 @@ textarea.input {
     text-decoration: none
   }
   .btn-play:active .circle {
-    color: #fff
-  }
-  .btn-play:active .circle::before {
-    inset: -6px
+    color: #fff;
+    background-color: var(--primary)
   }
   .social-btn:active {
     color: var(--primary-d)
@@ -3832,6 +3870,9 @@ textarea.input {
   }
   .s-contacts__tel:active {
     color: var(--primary)
+  }
+  .s-contacts__gallery:active .btn-play {
+    opacity: 1!important
   }
   .s-contacts__gallery-btn:active {
     background-color: rgba(0,0,0,.3)

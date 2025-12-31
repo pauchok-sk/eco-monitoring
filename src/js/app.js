@@ -13,6 +13,7 @@ import ecoboxDest from "./files/ecoboxDest.js";
 import requestEcobox from "./files/requestEcobox.js";
 import map from "./files/map.js";
 import copy from "./files/copy.js";
+import contactsVideo from "./files/contactsVideo.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   spoller();
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   requestEcobox();
   map();
   copy();
+  contactsVideo();
 
   Fancybox.bind("[data-fancybox]", { closeButton: false });
   // Fancybox.show([{ type: "inline", src: "#modal-connect" }]);
